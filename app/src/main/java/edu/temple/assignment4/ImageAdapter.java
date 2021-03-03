@@ -77,7 +77,7 @@ public class ImageAdapter extends BaseAdapter implements SpinnerAdapter {
         // Add the text view (including an adjustment for position for the prompt item)
         textView.setText(getItem(position).getName());
         textView.setTextSize(22);
-        textView.setPadding(position == 0 ? 160 : 32, position == 0 ? 24 : 92, 16, 15);
+        textView.setPadding(position == 0 ? 280 : 32, position == 0 ? 24 : 92, 16, 15);
 
         // Add the image
         imageView.setLayoutParams(new LinearLayout.LayoutParams(350,275));
