@@ -1,3 +1,6 @@
+build/
+.build/
+.build/*
 .idea/*
 .idea/
 .idea
@@ -77,3 +80,5 @@
 .gradle/checksums/md5-checksums.bin
 .gradle/checksums/sha1-checksums.bin
 .idea/assetWizardSettings.xml
+.idea/modules/app/Assignment4.app.iml
+.idea/gradle.xml
