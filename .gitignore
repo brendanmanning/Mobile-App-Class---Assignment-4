@@ -1,4 +1,7 @@
-
+.idea/*
+.idea/
+.idea
+.idea/*/*
 .gradle/checksums/checksums.lock
 .gradle/6.5/executionHistory/executionHistory.lock
 .gradle/6.5/fileChanges/last-build.bin
@@ -71,3 +74,6 @@
 .gradle/buildOutputCleanup/outputFiles.bin
 .idea/modules/app/Assignment4.app.iml
 .idea/modules/app/Assignment4.app.iml
+.gradle/checksums/md5-checksums.bin
+.gradle/checksums/sha1-checksums.bin
+.idea/assetWizardSettings.xml
