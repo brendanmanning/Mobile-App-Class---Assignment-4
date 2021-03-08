@@ -7,10 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
-public class ImageAdapter extends BaseAdapter implements SpinnerAdapter {
+public class ImageAdapter extends BaseAdapter implements ListAdapter {
 
     private final Context context;
     private final Theme[] themes;
@@ -50,16 +51,6 @@ public class ImageAdapter extends BaseAdapter implements SpinnerAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        TextView textView = new TextView(context);
-        textView.setText(getItem(position).getName());
-        textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-
-        return textView;
-    }
-
-    @Override
-    public View getDropDownView(int position, View convertView, ViewGroup parent) {
-
         // Create all the elements
         LinearLayout ll = new LinearLayout(context);
         TextView textView = new TextView(context);
@@ -85,5 +76,7 @@ public class ImageAdapter extends BaseAdapter implements SpinnerAdapter {
         ll.addView(textView);
 
         return ll;
+
     }
+
 }

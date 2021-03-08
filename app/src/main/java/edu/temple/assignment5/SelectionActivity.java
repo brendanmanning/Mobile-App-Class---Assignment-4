@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 public class SelectionActivity extends AppCompatActivity {
@@ -17,30 +19,27 @@ public class SelectionActivity extends AppCompatActivity {
 
         setTitle("Item Selection");
 
-        Spinner spinner = findViewById(R.id.spinnerView);
-        spinner.setAdapter(new ImageAdapter(this, Themes.themes));
+        GridView gridView = findViewById(R.id.gridView);
+        gridView.setAdapter(new ImageAdapter(this, Themes.themes));
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        gridView.setOnItemClickListener(new ListView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 // Ignore when the user selects the prompt item
-                if(position == 0) return;
+                if (position == 0) return;
 
                 // Select the item at position 0 so that when we return
                 // from the DisplayActivity, we get a fresh view
-                spinner.setSelection(0);
+                gridView.setSelection(0);
 
                 // Launch the displayer view
                 Intent launchIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
-                launchIntent.putExtra("theme", position-1);
+                launchIntent.putExtra("theme", position - 1);
                 startActivity(launchIntent);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
+
     }
 }
