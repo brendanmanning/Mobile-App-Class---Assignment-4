@@ -23,24 +23,12 @@ public class ImageAdapter extends BaseAdapter implements ListAdapter {
 
     @Override
     public int getCount() {
-
-        // Return 1 more theme than we actually have because
-        // of the "Select a theme" label
-        return themes.length + 1;
+        return themes.length;
     }
 
     @Override
     public Theme getItem(int position) {
-
-        // Create a Theme "item" to show a label without an image
-        if(position == 0) {
-            return new Theme("Select a theme", 0);
-        }
-
-        // Otherwise, return the image (with an off-by-one adjustment)
-        else {
-            return themes[position-1];
-        }
+        return themes[position];
     }
 
     @Override
@@ -64,7 +52,7 @@ public class ImageAdapter extends BaseAdapter implements ListAdapter {
         // Add the text view (including an adjustment for position for the prompt item)
         textView.setText(getItem(position).getName());
         textView.setTextSize(22);
-        textView.setPadding(position == 0 ? 280 : 32, position == 0 ? 24 : 92, 16, 15);
+        textView.setPadding(32, 92, 16, 15);
 
         // Add the image
         imageView.setLayoutParams(new LinearLayout.LayoutParams(350,275));
@@ -72,7 +60,7 @@ public class ImageAdapter extends BaseAdapter implements ListAdapter {
         imageView.setPadding(24, 0, 0, 0);
 
         // Add the items
-        if(position > 0) ll.addView(imageView);
+        ll.addView(imageView);
         ll.addView(textView);
 
         return ll;
