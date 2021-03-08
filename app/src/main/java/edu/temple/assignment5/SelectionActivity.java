@@ -20,24 +20,15 @@ public class SelectionActivity extends AppCompatActivity {
         setTitle("Item Selection");
 
         GridView gridView = findViewById(R.id.gridView);
+        gridView.setNumColumns(3);
         gridView.setAdapter(new ImageAdapter(this, Themes.themes));
 
         gridView.setOnItemClickListener(new ListView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                // Ignore when the user selects the prompt item
-                if (position == 0) return;
-
-                // Select the item at position 0 so that when we return
-                // from the DisplayActivity, we get a fresh view
-                gridView.setSelection(0);
-
-                // Launch the displayer view
                 Intent launchIntent = new Intent(SelectionActivity.this, DisplayActivity.class);
-                launchIntent.putExtra("theme", position - 1);
+                launchIntent.putExtra("theme", position);
                 startActivity(launchIntent);
-
             }
         });
 
