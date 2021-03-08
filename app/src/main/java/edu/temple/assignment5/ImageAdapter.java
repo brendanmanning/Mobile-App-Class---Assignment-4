@@ -1,8 +1,6 @@
-package edu.temple.assignment4;
+package edu.temple.assignment5;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.text.StaticLayout;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-
-import androidx.recyclerview.widget.DividerItemDecoration;
 
 public class ImageAdapter extends BaseAdapter implements SpinnerAdapter {
 
