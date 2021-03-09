@@ -23,6 +23,9 @@ public class SelectionActivity extends AppCompatActivity {
         gridView.setNumColumns(3);
         gridView.setAdapter(new ImageAdapter(this, Themes.themes));
 
+        gridView.setHorizontalSpacing(8);
+        gridView.setPadding(8, 0, 8, 0);
+
         gridView.setOnItemClickListener(new ListView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
