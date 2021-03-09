@@ -1,10 +1,14 @@
 package edu.temple.assignment5;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
@@ -36,34 +40,35 @@ public class ImageAdapter extends BaseAdapter implements ListAdapter {
         return 0;
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         // Create all the elements
-        LinearLayout ll = new LinearLayout(context);
+        FrameLayout fl = new FrameLayout(context);
         TextView textView = new TextView(context);
         ImageView imageView = new ImageView(context);
 
-        // Setup the layout
-        ll.setOrientation(LinearLayout.HORIZONTAL);
-        ll.setGravity(Gravity.LEFT);
-        ll.setPadding(8, 8, 8, 8);
-
         // Add the text view (including an adjustment for position for the prompt item)
         textView.setText(getItem(position).getName());
-        textView.setTextSize(22);
-        textView.setPadding(32, 92, 16, 15);
+        textView.setTextSize(18);
+        textView.setPadding(0, 0, 0, 0);
+        textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        textView.setGravity(Gravity.CENTER);
+        textView.setHeight(275);
+        textView.setTextColor(Color.WHITE);
+
 
         // Add the image
         imageView.setLayoutParams(new LinearLayout.LayoutParams(350,275));
         imageView.setImageResource(getItem(position).getResource());
-        imageView.setPadding(24, 0, 0, 0);
+        imageView.setPadding(0, 0, 0, 0);
 
         // Add the items
-        ll.addView(imageView);
-        ll.addView(textView);
+        fl.addView(imageView);
+        fl.addView(textView);
 
-        return ll;
+        return fl;
 
     }
 
