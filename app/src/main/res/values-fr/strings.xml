@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Parcs nationaux</string>
+    <string name="selection_activity_title">Sélection d\'article</string>
+    <string name="selection_activity_prompt">Cliquez sur un élément pour afficher</string>
+    <string-array name="selection_activity_item_names">
+        <item>Acadie</item>
+        <item>Parc Congaree</item>
+        <item>Parc de Great Smoky Mountain</item>
+        <item>Parc Shenandoah</item>
+        <item>Parc Everglades</item>
+        <item>Parc Arches</item>
+        <item>Parc Badlands</item>
+    </string-array>
+    <string name="display_activity_title">Afficher</string>
+</resources>
