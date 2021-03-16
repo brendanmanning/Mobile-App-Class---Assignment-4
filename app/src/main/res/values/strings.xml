@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">National Park Image Viewer App</string>
+    <string name="selection_activity_title">Item Selection</string>
+    <string name="selection_activity_prompt">Click an item to view</string>
+    <string-array name="selection_activity_item_names">
+        <item>Acadia</item>
+        <item>Congaree</item>
+        <item>Great Smoky Mountain</item>
+        <item>Shenandoah</item>
+        <item>Everglades</item>
+        <item>Arches</item>
+        <item>Badlands</item>
+    </string-array>
+    <string name="display_activity_title">Display</string>
 </resources>
