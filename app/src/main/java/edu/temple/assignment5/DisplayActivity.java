@@ -11,19 +11,18 @@ public class DisplayActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_activity);
-
         setTitle("Display");
 
-        System.out.println("In DisplayView");
+        Themes.setThemes(getResources());
 
         Intent intent = getIntent();
         int theme_index = intent.getIntExtra("theme", -1);
-        System.out.println("Theme index was: " + theme_index);
 
         if(theme_index >= 0) {
-            Theme theme = Themes.themes[theme_index];
+            Theme theme = Themes.getThemes()[theme_index];
 
             TextView text_view = findViewById(R.id.textView);
             text_view.setText(theme.getName());
