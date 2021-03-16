@@ -14,7 +14,7 @@ public class DisplayActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_activity);
-        setTitle("Display");
+        setTitle(R.string.display_activity_title);
 
         Themes.setThemes(getResources());
 

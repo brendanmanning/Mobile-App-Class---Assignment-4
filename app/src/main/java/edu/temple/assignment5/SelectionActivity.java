@@ -16,7 +16,7 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selection_activity);
-        setTitle("Item Selection");
+        setTitle(R.string.selection_activity_title);
 
         Themes.setThemes(getResources());
 
