@@ -16,12 +16,13 @@ public class SelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selection_activity);
-
         setTitle("Item Selection");
+
+        Themes.setThemes(getResources());
 
         GridView gridView = findViewById(R.id.gridView);
         gridView.setNumColumns(3);
-        gridView.setAdapter(new ImageAdapter(this, Themes.themes));
+        gridView.setAdapter(new ImageAdapter(this, Themes.getThemes()));
 
         gridView.setHorizontalSpacing(8);
         gridView.setPadding(8, 0, 8, 0);
