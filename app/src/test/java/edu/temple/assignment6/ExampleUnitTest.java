@@ -1,4 +1,4 @@
-package edu.temple.assignment5;
+package edu.temple.assignment6;
 
 import org.junit.Test;
 

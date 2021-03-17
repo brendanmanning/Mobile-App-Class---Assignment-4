@@ -1,6 +1,5 @@
-package edu.temple.assignment5;
+package edu.temple.assignment6;
 
-import android.content.Context;
 import android.content.res.Resources;
 
 public class Themes {

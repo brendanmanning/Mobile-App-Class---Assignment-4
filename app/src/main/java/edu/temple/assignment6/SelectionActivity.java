@@ -1,4 +1,4 @@
-package edu.temple.assignment5;
+package edu.temple.assignment6;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.Spinner;
 
 public class SelectionActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package edu.temple.assignment5;
+package edu.temple.assignment6;
 
 import android.content.Intent;
 import android.os.Bundle;

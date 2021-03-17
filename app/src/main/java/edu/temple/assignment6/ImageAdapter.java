@@ -1,8 +1,7 @@
-package edu.temple.assignment5;
+package edu.temple.assignment6;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter implements ListAdapter {
